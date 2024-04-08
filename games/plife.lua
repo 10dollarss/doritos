@@ -1,5 +1,6 @@
 local savepos = 0
 local cspawnpos = 0
+local defaultspeed = 0
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
 local Window = Library.CreateLib("Cat Script - Prison Life", "Ocean")
 local Tab = Window:NewTab("Home")
@@ -26,9 +27,12 @@ Section:NewButton("Criminal Team 2", "ButtonInfo", function()
     cspawnpos = game.workspace["Criminals Spawn"].SpawnLocation.CFrame
     print(cspawnpos)
     local cspawn = game.workspace["Criminals Spawn"].SpawnLocation
-    local humanoidrootpart = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    local humanoidrootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+    defaultspeed = humanoidrootpart.WalkSpeed
     wait(0.8)
-    cspawn.CFrame = humanoidrootpart
+    cspawn.CFrame = humanoidrootpart.CFrame
+    humanoidrootpart.WalkSpeed = 1
     wait(1)
     cspawn.CFrame = cspawnpos
+    humanoidrootpart.WalkSpeed = defaultspeed
 end)
