@@ -15,12 +15,12 @@ Section:NewLabel("Prison Life")
 Section:NewLabel("GameID: 155615604")
 local Tab = Window:NewTab("Team")
 local Section = Tab:NewSection("  ")
-Section:NewButton("Criminal Team", "ButtonInfo", function(player)
+Section:NewButton("Criminal Team", "ButtonInfo", function()
     local savepos = 0
     wait(0.1)
     savepos = game.workspace[Criminals Spawn].SpawnLocation.CFrame
     game.workspace[Criminals Spawn].SpawnLocation.Anchored = false
-    game.workspace[Criminals Spawn].SpawnLocation.CFrame = player.Character.HumanoidRootPart
+    game.workspace[Criminals Spawn].SpawnLocation.CFrame = game.players.localplayer.Character.HumanoidRootPart
     wait(1)
     savepos = game.workspace[Criminals Spawn].SpawnLocation.CFrame = savepos
     wait(0.5)
