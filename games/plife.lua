@@ -1,4 +1,4 @@
--- local things
+-- local thingss
 local teamwait = false
 local savepos = 0 ---> Save Player Last Position
 
