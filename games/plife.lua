@@ -8,7 +8,7 @@ Section:NewLabel("Prison Life")
 Section:NewLabel("GameID: 155615604")
 local Tab = Window:NewTab("Team")
 local Section = Tab:NewSection("  ")
-Section:NewButton("Criminal Team", "ButtonInfo", function(player)
+Section:NewButton("Criminal Team", "ButtonInfo", function()
     savepos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
     local crimpart = Instance.new("Part")
     crimpart.Anchored = true
