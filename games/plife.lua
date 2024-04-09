@@ -1,6 +1,6 @@
--- local things
+-- local thingss
 local savepos = 0 ---> Save Player Last Position
-local waittime = 0.4 -- u can change
+local waittime = 0.3 -- u can change
 
 -- team functions
 function Guards()
@@ -25,38 +25,23 @@ Section:NewLabel("GameID: 155615604")
 local Tab = Window:NewTab("Team")
 local Section = Tab:NewSection("  ")
 Section:NewButton("Criminal Team", "ButtonInfo", function()
-        local savepos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-        local ab1 = false
-        if ab1 == false then
-            ab1 = true
-            Criminals()
-            wait(waittime)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savepos
-            ab1 = false
-            print("plr saved pos"..savepos)
-        end
+    local savepos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+     Criminals()
+      wait(waittime)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savepos
+     print("saved cframe: "..savepos)
 end)
 Section:NewButton("G Team", "ButtonInfo", function()
     local savepos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-    local ab2 = false
-    if ab2 == false then
-        ab2 = true
-        Guards()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savepos
-        wait(waittime)
-        ab2 = false
-        print("plr saved pos"..savepos)
-    end
+     Guards()
+     wait(waittime)
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savepos
+     print("saved cframe:: "..savepos)
 end)
 Section:NewButton("I Team", "ButtonInfo", function()
     local savepos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-    local ab3 = false
-    if ab3 == false then
-        ab3 = true
-        Guards()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savepos
-        wait(waittime)
-        ab3 = false
-        print("plr saved pos"..savepos)
-    end
+     Inmate()
+     wait(waittime)
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savepos
+     print("saved cframe: "..savepos)
 end)
