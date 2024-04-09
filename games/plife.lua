@@ -1,5 +1,6 @@
--- local things
+-- local thingss
 local savepos = 0 ---> Save Player Last Position
+local waittime = 0.1 -- u can change
 
 -- team functions
 function Guards()
@@ -29,30 +30,32 @@ Section:NewButton("Criminal Team", "ButtonInfo", function()
         if ab1 == false then
             ab1 = true
             Criminals()
-            wait(0.5)
+            wait(waittime)
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savepos
             savepos = 0
             ab1 = false
         end
 end)
 Section:NewButton("G Team", "ButtonInfo", function()
+    local savepos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
     local ab2 = false
     if ab2 == false then
         ab2 = true
         Guards()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savepos
-        wait(0.5)
+        wait(waittime)
         savepos = 0
         ab2 = false
     end
 end)
 Section:NewButton("I Team", "ButtonInfo", function()
+    local savepos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
     local ab3 = false
     if ab3 == false then
         ab3 = true
         Guards()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savepos
-        wait(0.5)
+        wait(waittime)
         savepos = 0
         ab3 = false
     end
