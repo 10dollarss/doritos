@@ -7,7 +7,6 @@ function Guards()
 end
 function Criminals()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-976.125183, 109.123924, 2059.99536)
-    wait(1.5)
 end
 function Inmate()
     workspace.Remote.TeamEvent:FireServer("Bright Orange")
@@ -25,12 +24,13 @@ Section:NewLabel("GameID: 155615604")
 local Tab = Window:NewTab("Team")
 local Section = Tab:NewSection("  ")
 Section:NewButton("Criminal Team", "ButtonInfo", function()
+        local savepos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
         local ab1 = false
         if ab1 == false then
             ab1 = true
             Criminals()
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savepos
             wait(0.5)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savepos
             savepos = 0
             ab1 = false
         end
