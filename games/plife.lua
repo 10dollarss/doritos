@@ -30,14 +30,13 @@ local Tab = Window:NewTab("Team")
 local Section = Tab:NewSection("  ")
 Section:NewButton("Criminals Team", "ButtonInfo", function()
     local savepos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-     Criminals()
+     Criminal()
       wait(waittime)
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savepos
 end)
 Section:NewDropdown("Select Team", "DropdownInf", {"Criminal", "Police", "Inmate"}, function(currentOption)
  local savepos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
- local v = currentOption
- v()
+ currentOption()
  wait(waittime)
  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savepos
 end)
