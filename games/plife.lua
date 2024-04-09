@@ -1,4 +1,4 @@
--- local thingss
+-- local things
 local savepos = 0 ---> Save Player Last Position
 
 -- team functions
