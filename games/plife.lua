@@ -1,16 +1,20 @@
 -- local thingss
+local workspace = game.workspace
 local savepos = 0 ---> Save Player Last Position
 local waittime = 0.3 -- u can change
 
 -- team functions
 function Guards()
+        -- Medium stone grey
+        workspace.Remote.TeamEvent:FireServer("Medium stone grey")
         workspace.Remote.TeamEvent:FireServer("Bright blue")
 end
 function Criminals()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-976.125183, 109.123924, 2059.99536)
 end
 function Inmate()
-    workspace.Remote.TeamEvent:FireServer("Bright Orange")
+    workspace.Remote.TeamEvent:FireServer("Medium stone grey")
+    workspace.Remote.TeamEvent:FireServer("Bright orange")
 end
 
 
